@@ -51,11 +51,11 @@ class SettingViewState extends State<SettingView> {
           ),
         ],
         leading: IconButton(
-          padding: EdgeInsets.only(left: 15),
+          padding: EdgeInsets.only(left: 10),
           onPressed: (){
             Navigator.of(context).pop();
           },
-          icon: Icon(Icons.short_text, size: 40),
+          icon: Icon(Icons.chevron_left, size: 40),
         ),
       ),
       body: Container(
