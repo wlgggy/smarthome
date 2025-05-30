@@ -31,7 +31,7 @@ class CardWidgetState extends State<CardWidget> {
         color: _isSwitch ? Color.fromARGB(255, 4, 30, 58) : Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: EdgeInsets.only(left :10),
+      padding: EdgeInsets.only(left: 15),
       margin: EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,11 @@ class CardWidgetState extends State<CardWidget> {
           Padding(padding: EdgeInsets.only(top: 5)),
           Text(
             widget._title,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: _isSwitch ? Colors.white : Colors.black),
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: _isSwitch ? Colors.white : Colors.black,
+            ),
           ),
           Container(
             child: Row(
@@ -79,12 +83,14 @@ class CardWidgetState extends State<CardWidget> {
               ],
             ),
           ),
-          Switch(value: _isSwitch, onChanged: (isChecked) {
-            setState(() {
-              _isSwitch = isChecked;
-
-            });
-          }),
+          Switch(
+            value: _isSwitch,
+            onChanged: (isChecked) {
+              setState(() {
+                _isSwitch = isChecked;
+              });
+            },
+          ),
         ],
       ),
     );

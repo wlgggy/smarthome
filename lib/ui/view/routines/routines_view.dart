@@ -16,11 +16,10 @@ class RoutinesViewState extends State<RoutinesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(left: 15),
+        padding: EdgeInsets.symmetric(horizontal: 24),
         // height: 300,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 10,
           children: [
             Container(
               child: HeaderTitle(
