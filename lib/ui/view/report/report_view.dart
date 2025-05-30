@@ -57,39 +57,45 @@ class ReportViewState extends State<ReportView> {
                     '307.7kWh에요. 12.7%나 많이 썼어요',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Color.fromRGBO(112, 112, 112, 100),
+                      color: Theme.of(context).colorScheme.error,
                     ),
                   ),
                 ],
               ),
             ),
             Container(
-
               width: 360,
               height: 140,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.error,
                 borderRadius: BorderRadius.circular(10),
               ),
               padding: EdgeInsets.only(left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
+                spacing: 10,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Energy Usage',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Energy Usage',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
+                          ),
                         ),
-                      ),
-                      Text('10 Oct, 2023'),
-                    ],
+                        Container(
+                          padding: EdgeInsets.only(right: 25),
+                          child: Text('10 Oct, 2023'),
+                        ),
+                      ],
+                    ),
                   ),
                   Row(
-                    spacing: 20,
+                    spacing: 15,
                     children: [
                       Row(
                         spacing: 20,
@@ -123,6 +129,11 @@ class ReportViewState extends State<ReportView> {
                           ),
                         ],
                       ),
+                      Container(
+                        width: 10,
+                        height: 5,
+                        color: Color.fromRGBO(112, 112, 112, 100),
+                      ),
                       Row(
                         spacing: 20,
                         children: [
@@ -145,7 +156,7 @@ class ReportViewState extends State<ReportView> {
                                 ),
                               ),
                               Text(
-                                '26.8 kWh',
+                                '345.56 kWh',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 20,
@@ -157,6 +168,7 @@ class ReportViewState extends State<ReportView> {
                       ),
                     ],
                   ),
+                  Row()
                 ],
               ),
             ),
