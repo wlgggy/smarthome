@@ -50,14 +50,14 @@ class ReportViewState extends State<ReportView> {
                     '4인 가구의 10월 평균 전력 사용량은',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Color.fromRGBO(112, 112, 112, 100),
+                      color: Color.fromARGB(255, 112, 112, 112),
                     ),
                   ),
                   Text(
                     '307.7kWh에요. 12.7%나 많이 썼어요',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Theme.of(context).colorScheme.error,
+                      color: Color.fromARGB(255, 112, 112, 112),
                     ),
                   ),
                 ],
