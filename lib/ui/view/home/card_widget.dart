@@ -31,11 +31,12 @@ class CardWidgetState extends State<CardWidget> {
         color: _isSwitch ? Color.fromARGB(255, 4, 30, 58) : Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.only(left: 15),
       margin: EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Padding(padding: EdgeInsets.only(top: 15),),
           Icon(
             widget._icon,
             size: 36,
@@ -55,6 +56,7 @@ class CardWidgetState extends State<CardWidget> {
               color:Color.fromARGB(255, 112, 112, 112)
             ),
           ),
+          Padding(padding: EdgeInsets.only(bottom: 5)),
           Switch(
             value: _isSwitch,
             onChanged: (isChecked) {

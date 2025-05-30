@@ -19,7 +19,7 @@ class IconWidgetState extends State<IconWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80,
+      width: 75,
       height: 100,
       child: Column(
         children: [
