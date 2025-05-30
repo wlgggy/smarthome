@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smarthome/ui/view/home/home_view.dart';
 import 'package:smarthome/ui/view/report/report_view.dart';
 import 'package:smarthome/ui/view/routines/routines_view.dart';
+import 'package:smarthome/ui/view/setting/setting_view.dart';
 import 'package:smarthome/ui/widget/sized_widget.dart';
 
 class LayoutView extends StatefulWidget {
@@ -38,7 +39,7 @@ class LayoutViewState extends State<LayoutView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actionsPadding: EdgeInsets.only(right: 10),
+        actionsPadding: EdgeInsets.only(right: 24),
         actions: [
           Container(
             height: 45,
@@ -53,46 +54,14 @@ class LayoutViewState extends State<LayoutView> {
           ),
         ],
         leading: IconButton(
-          onPressed: () {},
+          padding: EdgeInsets.only(left: 15),
+          onPressed: (){
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context)=> SettingView()));
+          },
           icon: Icon(Icons.short_text, size: 40),
         ),
       ),
-      /* body: Container(
-        child: Column(
-          children: [
-            Column(
-              children: [Text('Hi Heosu'), Text('Welcome to your smart Home')],
-            ),
-            Row(
-              children: [
-                SizedBox(width: 80, height: 80, child: Icon(Icons.chair)),
-                SizedBox(
-                  width: 80,
-                  height: 80,
-                  child: Icon(Icons.dining_outlined),
-                ),
-                SizedBox(width: 80, height: 80, child: Icon(Icons.bed)),
-                SizedBox(
-                  width: 80,
-                  height: 80,
-                  child: Icon(Icons.bathtub_outlined),
-                ),
-                SizedBox(width: 80, height: 80, child: Icon(Icons.chair)),
-              ],
-            ),
-            Row(children: [Text('Devices'), Icon(Icons.chevron_right)]),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Row(children: [SizedBox()]),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),*/
       body: PageView(
         controller: this._pageController,
         children: this.widget.bodyWidgets,
